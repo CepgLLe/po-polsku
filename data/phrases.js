@@ -3,7 +3,7 @@ window.TRAINER_PHRASES = [
   { id: 'p-dzien-dobry', ru: 'добрый день', pl: 'dzień dobry', level: 0, points: 0, links: [{ type: 'word', id: 'w-dzien' }] },
   { id: 'p-dziekuje', ru: 'большое спасибо', pl: 'bardzo dziękuję', level: 0, points: 0, links: [] },
   { id: 'p-przepraszam', ru: 'извините, пожалуйста', pl: 'przepraszam', level: 0, points: 0, links: [] },
-  { id: 'p-jak-sie-masz', ru: 'как дела?', pl: 'jak się masz?', level: 0, points: 0, links: [] },
+  { id: 'p-jak-sie-masz', ru: 'как дела? (неформально)', pl: 'jak się masz?', level: 0, points: 0, links: [] },
   { id: 'p-do-zobaczenia', ru: 'до встречи', pl: 'do zobaczenia', level: 0, points: 0, links: [] },
   { id: 'p-nie-rozumiem', ru: 'я не понимаю', pl: 'nie rozumiem', level: 0, points: 0, links: [] },
   { id: 'p-powtorzyc', ru: 'можно повторить?', pl: 'czy można powtórzyć?', level: 0, points: 0, links: [] },
