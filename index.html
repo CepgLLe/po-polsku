@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="assets/styles.css">
   <script defer src="data/words.js"></script>
   <script defer src="data/phrases.js"></script>
+  <script defer src="data/common.js"></script>
   <script defer src="assets/session.js"></script>
   <script defer src="assets/app.js"></script>
 </head>
@@ -20,7 +21,7 @@
     </header>
     <main>
       <div class="intro"><p class="eyebrow">ТВОИ ПЯТЬ МИНУТ ПОЛЬСКОГО</p><h1>Вспомни. Открой.<br><span>Произнеси вслух.</span></h1><p class="description">Пять карточек за раз. Нажми, чтобы увидеть перевод,<br class="desktop-break"> и повтори его несколько раз — в своём темпе.</p></div>
-      <nav class="tabs" aria-label="Вид тренировки"><button type="button" data-tab="words" aria-pressed="true">Слова <span id="words-total"></span></button><button type="button" data-tab="phrases" aria-pressed="false">Словосочетания и фразы <span id="phrases-total"></span></button></nav>
+      <nav class="tabs" aria-label="Вид тренировки"><button type="button" data-tab="words" aria-pressed="true">Слова <span id="words-total"></span></button><button type="button" data-tab="phrases" aria-pressed="false">Словосочетания и фразы <span id="phrases-total"></span></button><button type="button" data-tab="common" aria-pressed="false">Связки и частотные слова <span id="common-total"></span></button></nav>
       <section class="training" aria-labelledby="training-title">
         <div class="training-heading"><div><p class="eyebrow" id="training-label">СЛОВАРНЫЙ ЗАПАС</p><h2 id="training-title">Одна карточка — один шаг</h2></div><div class="session-progress"><p><strong id="read-count">0</strong><span id="total-count"> / 0</span></p><span>повторено за сессию</span></div></div>
         <div class="progress-track" role="progressbar" aria-label="Прогресс сессии" aria-valuemin="0" aria-valuenow="0" aria-valuemax="1"><div id="progress-fill"></div></div>

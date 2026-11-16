@@ -1,7 +1,12 @@
 (() => {
   'use strict';
   const engine = window.TrainerSession;
-  const datasets = { words: window.TRAINER_WORDS, phrases: window.TRAINER_PHRASES };
+  const datasets = { words: window.TRAINER_WORDS, phrases: window.TRAINER_PHRASES, common: window.TRAINER_COMMON };
+  const headings = {
+    words: ['СЛОВАРНЫЙ ЗАПАС', 'Одна карточка — один шаг'],
+    phrases: ['ЖИВОЙ ПОЛЬСКИЙ', 'От слов — к разговору'],
+    common: ['ЧАСТОТНАЯ ЛЕКСИКА', 'Связки и частотные слова'],
+  };
   const $ = selector => document.querySelector(selector);
   let active, data, state;
   let storageAvailable = true;
@@ -76,10 +81,12 @@
     updateProgress();
   }
   function activate() {
-    active = location.hash === '#phrases' ? 'phrases' : 'words';
+    const tab = location.hash.slice(1);
+    active = Object.keys(datasets).includes(tab) ? tab : 'words';
     document.querySelectorAll('[data-tab]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.tab === active)));
-    $('#training-label').textContent = active === 'words' ? 'СЛОВАРНЫЙ ЗАПАС' : 'ЖИВОЙ ПОЛЬСКИЙ';
-    $('#training-title').textContent = active === 'words' ? 'Одна карточка — один шаг' : 'От слов — к разговору';
+    const [label, title] = headings[active];
+    $('#training-label').textContent = label;
+    $('#training-title').textContent = title;
     try {
       data = engine.validate(datasets[active]);
       state = engine.restore(data, read()); save(); render();
@@ -96,6 +103,6 @@
   window.addEventListener('hashchange', activate);
   $('#reset').addEventListener('click', () => { state = engine.restore(data, null); refresh(); });
   $('#next').addEventListener('click', () => { if (engine.next(data, state)) refresh(); });
-  for (const name of ['words', 'phrases']) $('#' + name + '-total').textContent = Array.isArray(datasets[name]) ? datasets[name].length : '—';
+  for (const [name, pairs] of Object.entries(datasets)) $('#' + name + '-total').textContent = Array.isArray(pairs) ? pairs.length : '—';
   activate();
 })();
