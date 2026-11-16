@@ -1,0 +1,21 @@
+// Связи могут указывать на слова, фразы и будущие предложения.
+window.TRAINER_PHRASES = [
+  { id: 'p-dzien-dobry', ru: 'добрый день', pl: 'dzień dobry', level: 0, points: 0, links: [{ type: 'word', id: 'w-dzien' }] },
+  { id: 'p-dziekuje', ru: 'большое спасибо', pl: 'bardzo dziękuję', level: 0, points: 0, links: [] },
+  { id: 'p-przepraszam', ru: 'извините, пожалуйста', pl: 'przepraszam', level: 0, points: 0, links: [] },
+  { id: 'p-jak-sie-masz', ru: 'как дела?', pl: 'jak się masz?', level: 0, points: 0, links: [] },
+  { id: 'p-do-zobaczenia', ru: 'до встречи', pl: 'do zobaczenia', level: 0, points: 0, links: [] },
+  { id: 'p-nie-rozumiem', ru: 'я не понимаю', pl: 'nie rozumiem', level: 0, points: 0, links: [] },
+  { id: 'p-powtorzyc', ru: 'можно повторить?', pl: 'czy można powtórzyć?', level: 0, points: 0, links: [] },
+  { id: 'p-ile-kosztuje', ru: 'сколько это стоит?', pl: 'ile to kosztuje?', level: 0, points: 0, links: [] },
+  { id: 'p-kawa', ru: 'кофе с молоком', pl: 'kawa z mlekiem', level: 0, points: 0, links: [{ type: 'word', id: 'w-kawa' }] },
+  { id: 'p-woda', ru: 'вода без газа', pl: 'woda niegazowana', level: 0, points: 0, links: [{ type: 'word', id: 'w-woda' }] },
+  { id: 'p-ucze-sie', ru: 'я учу польский', pl: 'uczę się polskiego', level: 0, points: 0, links: [] },
+  { id: 'p-milego-dnia', ru: 'хорошего дня!', pl: 'miłego dnia!', level: 0, points: 0, links: [{ type: 'word', id: 'w-dzien' }] },
+  { id: 'p-na-wszelki-wypadek', ru: 'на всякий случай', pl: 'na wszelki wypadek', level: 0, points: 0, links: [] },
+  { id: 'p-bez-dwoch-zdan', ru: 'без сомнения', pl: 'bez dwóch zdań', level: 0, points: 0, links: [] },
+  { id: 'p-uprawiac-sport', ru: 'заниматься спортом', pl: 'uprawiać sport', level: 0, points: 0, links: [] },
+  { id: 'p-przez-moment', ru: 'на мгновение', pl: 'przez moment', level: 0, points: 0, links: [] },
+  { id: 'p-na-wprost', ru: 'прямо / напротив', pl: 'na wprost', level: 0, points: 0, links: [] },
+  { id: 'p-w-srodku', ru: 'внутри / в середине', pl: 'w środku', level: 0, points: 0, links: [] },
+];

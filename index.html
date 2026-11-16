@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f6f5ef">
+  <title>Po polsku — языковой тренажёр</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <script defer src="data/words.js"></script>
+  <script defer src="data/phrases.js"></script>
+  <script defer src="assets/session.js"></script>
+  <script defer src="assets/app.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="header">
+      <a class="brand" href="#words" aria-label="Po polsku — тренажёр слов"><span class="brand-mark" aria-hidden="true">p.</span>po polsku<span class="brand-dot">.</span></a>
+      <span class="header-note">Маленькими шагами, каждый день</span>
+      <span class="language-badge">RU <span aria-hidden="true">→</span> PL</span>
+    </header>
+    <main>
+      <div class="intro"><p class="eyebrow">ТВОИ ПЯТЬ МИНУТ ПОЛЬСКОГО</p><h1>Вспомни. Открой.<br><span>Произнеси вслух.</span></h1><p class="description">Пять карточек за раз. Нажми, чтобы увидеть перевод,<br class="desktop-break"> и повтори его несколько раз — в своём темпе.</p></div>
+      <nav class="tabs" aria-label="Вид тренировки"><button type="button" data-tab="words" aria-pressed="true">Слова <span id="words-total"></span></button><button type="button" data-tab="phrases" aria-pressed="false">Словосочетания и фразы <span id="phrases-total"></span></button></nav>
+      <section class="training" aria-labelledby="training-title">
+        <div class="training-heading"><div><p class="eyebrow" id="training-label">СЛОВАРНЫЙ ЗАПАС</p><h2 id="training-title">Одна карточка — один шаг</h2></div><div class="session-progress"><p><strong id="read-count">0</strong><span id="total-count"> / 0</span></p><span>повторено за сессию</span></div></div>
+        <div class="progress-track" role="progressbar" aria-label="Прогресс сессии" aria-valuemin="0" aria-valuenow="0" aria-valuemax="1"><div id="progress-fill"></div></div>
+        <div id="cards" class="cards"></div>
+        <div id="empty-state" class="empty-state" hidden><span class="finish-icon" aria-hidden="true">✓</span><h2>Всё повторено. Świetnie!</h2><p>Хорошая работа. Нажми «Сброс», чтобы начать новую сессию.</p></div>
+        <p id="batch-status" class="batch-status" role="status" aria-live="polite"></p>
+        <p id="notice" class="notice" role="status" hidden></p>
+      </section>
+    </main>
+    <footer class="controls"><div class="controls-inner"><p class="footer-note"><span aria-hidden="true">↗</span> Немного практики — больше уверенности</p><div class="control-buttons"><button type="button" id="reset" class="reset-button"><span aria-hidden="true">↺</span> Сброс</button><button type="button" id="next" class="next-button" disabled>Далей <span aria-hidden="true">→</span></button></div></div></footer>
+  </div>
+</body>
+</html>
